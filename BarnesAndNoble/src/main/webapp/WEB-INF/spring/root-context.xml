@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		
+		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
+	
+		<bean id="customerValidator" class="com.bn.validator.CustomerValidator" />
+		<bean id="userValidator" class="com.bn.validator.UserValidator" />
+		<bean id="bookValidator" class="com.bn.validator.BookValidator" />
+		<bean id="genreValidator" class="com.bn.validator.GenreValidator" />
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="customerDAO" class="com.bn.dao.CustomerDAO" />
+		<bean id="userDAO" class="com.bn.dao.UserDAO" />
+		<bean id="genreDAO" class="com.bn.dao.GenreDAO" />
+		<bean id="bookDAO" class="com.bn.dao.BookDAO" />
+		<bean id="ordersDAO" class="com.bn.dao.OrdersDAO" />
+		<bean id="orderDetailsDAO" class="com.bn.dao.OrderDetailsDAO" />
+		
+</beans>
